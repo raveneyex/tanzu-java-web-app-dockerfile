@@ -5,7 +5,7 @@ ARG RUNTIME_IMAGE=gcr.io/distroless/java17-debian11
 FROM $BUILDER_IMAGE AS build
 
         ADD . .
-        RUN sleep 600
+        RUN sleep 150
         RUN unset MAVEN_CONFIG && ./mvnw clean package -B -DskipTests
 
 
